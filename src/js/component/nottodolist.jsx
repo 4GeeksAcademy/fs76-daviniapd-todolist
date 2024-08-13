@@ -7,8 +7,8 @@ const NotToDoList = () => {
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && newItem.trim() !== '') {
-          setListItems(listItems.concat([{ text: newItem, checked: false }]));
-          setNewItem('');
+            setListItems(listItems.concat([{ text: newItem, checked: false }]));
+            setNewItem('');
         }
     };
 
@@ -45,7 +45,18 @@ const NotToDoList = () => {
                                 checked={listItem.checked}
                                 onChange={() => handleCheckboxChange(index)}
                             />
-                            <span>{listItem.text}</span>
+                            <span style={{ fontSize: "20px", textDecoration: listItem.checked ? 'line-through' : 'none' }}>
+                                {listItem.text}
+                            </span>
+                            <button
+                                type="button"
+                                className="fa-solid fa-trash-can ms-auto btn btn-outline-secondary rounded-circle p-2 lh-1"
+                                onClick={() => {
+                                    const newListItems = listItems.slice();
+                                    newListItems.splice(index, 1);
+                                    setListItems(newListItems);
+                                }}
+                            />
                         </label>
 
 
@@ -56,7 +67,7 @@ const NotToDoList = () => {
                         <a href="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                             <svg className="bi" width="30" height="24"></svg>
                         </a>
-                        <span className="mb-3 mb-md-0 text-body-secondary opacity-75">{listItems.length} don't do it</span>
+                        <span className="mb-3 mb-md-0 text-body-secondary opacity-75">{listItems.length} DoNotDoIt</span>
                     </div>
                 </footer>
             </ul>
