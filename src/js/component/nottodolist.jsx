@@ -39,7 +39,7 @@ const NotToDoList = () => {
                         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                             <svg class="bi" width="30" height="24"></svg>
                         </a>
-                        <span class="mb-3 mb-md-0 text-body-secondary opacity-75">count</span>
+                        <span class="mb-3 mb-md-0 text-body-secondary opacity-75">{listItems.length} don't do it</span>
                     </div>
                 </footer>
             </ul>
