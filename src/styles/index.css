@@ -1,3 +1,4 @@
+
 body {
   background-image: url("https://www.montpellier-appliances.com/wp-content/uploads/2022/10/MAB145_2000px_Web_Lifestyle.jpg");
   background-position: center center;
@@ -10,12 +11,22 @@ body {
 }
 
 .card {
-  box-shadow: 0px 0px 6px 1px rgba(128, 128, 128, 0.5);
+  background-image: url("https://static.vecteezy.com/system/resources/previews/009/397/853/non_2x/paper-sheet-clipart-design-illustration-free-png.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+  background-color: transparent;
+  border: 0px;
+  margin-top: -3px;
+
+
 }
 
 #posIt {
   background-color: #fef8af;
   box-shadow: 0px 3px 3px 1px rgba(128, 128, 128, 0.5);
+  width: 70%;
 
 }
 
@@ -25,7 +36,6 @@ body {
 
 .list-group-item:hover {
   transform: scale(1.01);
-
   cursor: pointer;
 }
 
