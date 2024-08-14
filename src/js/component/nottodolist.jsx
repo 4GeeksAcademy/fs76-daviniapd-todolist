@@ -29,8 +29,8 @@ const NotToDoList = () => {
 
     return (
         <>
-            <div className="card ms-4" style={{ width: "25rem", height: "34rem", position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)"}}>
-                <h1 className="text-center mt-5 mb-4">Not To Do List</h1>
+            <div className="card ms-4 pt-2" style={{ width: "25rem", height: "34rem", position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)"}}>
+                <h1 className="text-center mt-5 mb-3">Not To Do List</h1>
                 <form onSubmit={send}>
                     <input
                         className="form-control form-control-lg w-75 mx-auto"
