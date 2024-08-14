@@ -41,8 +41,8 @@ const NotToDoList = () => {
                         onChange={(e) => setNewItem(e.target.value)}
                         onKeyDown={handleKeyPress}
                     />
-                    <div className="mx-auto my-3 bg-opacity-50 p-3" id="posIt" style={{ position: 'relative', height: '100%' }}>
-                        <ul className="list-group" style={{ overflow: 'auto', maxHeight: '220px' }}>
+                    <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posIt" style={{ position: 'relative', height: '100%' }}>
+                        <ul className="list-group" style={{ overflow: 'auto', maxHeight: '230px' }}>
                             {listItems.length === 0 && (
                                 <h5 className="text-center text-danger p-5 bg-danger bg-opacity-25 rounded">Your list is empty, I can't believe you have no regrets.</h5>
                             )}
@@ -71,7 +71,7 @@ const NotToDoList = () => {
                             ))}
                         </ul>
 
-                        <footer className=" d-flex flex-wrap justify-content-center py-3 mt-4 border-top" style={{ position: 'absolute', bottom: 0, width: "90%" }}>
+                        <footer className=" d-flex flex-wrap justify-content-center pb-1 border-top" style={{ position: 'absolute', bottom: 0, width: "90%" }}>
                             <span className="mb-3 mb-md-0 text-body-secondary opacity-75">Don't do it total: {listItems.length} </span>
                         </footer>
 
