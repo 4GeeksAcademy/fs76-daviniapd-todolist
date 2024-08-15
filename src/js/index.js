@@ -7,8 +7,8 @@ import "../styles/index.css";
 
 //import your own components
 // import Home from "./component/home.jsx";
-import NotToDoList from "./component/nottodolist.jsx";
+import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<NotToDoList />);
+ReactDOM.createRoot(document.getElementById('app')).render(<Home />);
 

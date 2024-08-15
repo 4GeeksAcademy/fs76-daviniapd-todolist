@@ -5,7 +5,11 @@ import "/workspaces/fs76-daviniapd-todolist/src/styles/index.css";
 
 const NotToDoList = () => {
 
-    const [listItems, setListItems] = useState([]);
+    const [listItems, setListItems] = useState([
+        { text: "Eating cheetos before coding", completed: false },
+        { text: "Text while walking", completed: false },
+        { text: "Mix up salt and", completed: false }]);
+
     const [newItem, setNewItem] = useState('');
 
     function handleKeyPress(e) {
@@ -21,64 +25,65 @@ const NotToDoList = () => {
         setListItems(newListItems);
     };
 
-    function send (e) {
+    function send(e) {
         e.preventDefault();
-        console.log ("Reminder ‘not to do’ added correctly");
+        console.log("Reminder ‘not to do’ added correctly");
 
     }
 
     return (
         <>
-            <div className="card ms-4 pt-2">
-                <h1 className="text-center mt-5 mb-3">Not To Do List</h1>
-                <form onSubmit={send}>
-                    <input
-                        className="form-control form-control-lg w-75 mx-auto"
-                        type="text"
-                        placeholder="What would you regret doing?"
-                        aria-label="Not to do item"
-                        value={newItem}
-                        onChange={(e) => setNewItem(e.target.value)}
-                        onKeyDown={handleKeyPress}
-                    />
-                    <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posIt">
-                        <ul className="list-group">
-                            {listItems.length === 0 && (
-                                <h5 className="text-center text-danger p-5 bg-danger bg-opacity-25 rounded">Your list is empty, I can't believe you have no regrets.</h5>
-                            )}
-                            
-                            {listItems.map((listItem, index) => (
+            <div className="backgroundNotToDo">
+                <div className="card ms-4 pt-2" id="cardNotToDo">
+                    <h1 className="text-center mt-5 mb-3">Not To Do List</h1>
+                    <form onSubmit={send}>
+                        <input
+                            className="form-control form-control-lg w-75 mx-auto"
+                            type="text"
+                            placeholder="What would you regret doing?"
+                            aria-label="Not to do item"
+                            value={newItem}
+                            onChange={(e) => setNewItem(e.target.value)}
+                            onKeyDown={handleKeyPress}
+                        />
+                        <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posItNotToDo">
+                            <ul className="list-group" id="listNotToDo">
+                                {listItems.length === 0 && (
+                                    <h5 className="text-center text-danger p-5 bg-danger bg-opacity-25 rounded">Your list is empty, I can't believe you have no regrets.</h5>
+                                )}
 
-                                <label className="list-group-item d-flex gap-2" key={index}>
-                                    <input
-                                        className="form-check-input flex-shrink-0"
-                                        type="checkbox"
-                                        checked={listItem.checked}
-                                        onChange={() => handleCheckboxChange(index)}
-                                    />
-                                    <span className={`item ${listItem.checked ? 'checked' : ''}`}>
-                                        {listItem.text}
-                                    </span>
-                                    <button
-                                        type="button"
-                                        className="fa-solid fa-trash-can ms-auto btn btn-outline-secondary rounded-circle p-2 lh-1"
-                                        aria-hidden="true"
-                                        onClick={() => {
-                                            setListItems(listItems.filter(item => item !== listItem));
-                                        }}
-                                    />
-                                </label>
-                            ))}
-                        </ul>
+                                {listItems.map((listItem, index) => (
 
-                        <footer className=" d-flex flex-wrap justify-content-center pb-1 border-top" style={{ position: 'absolute', bottom: 0, width: "90%" }}>
-                            <span className="mb-3 mb-md-0 text-body-secondary opacity-75">Don't do it total: {listItems.length} </span>
-                        </footer>
+                                    <label className="list-group-item d-flex gap-2" key={index}>
+                                        <input
+                                            className="form-check-input flex-shrink-0"
+                                            type="checkbox"
+                                            checked={listItem.checked}
+                                            onChange={() => handleCheckboxChange(index)}
+                                        />
+                                        <span className={`item ${listItem.checked ? 'checked' : ''}`}>
+                                            {listItem.text}
+                                        </span>
+                                        <button
+                                            type="button"
+                                            className="fa-solid fa-trash-can ms-auto btn btn-outline-secondary rounded-circle p-2 lh-1"
+                                            aria-hidden="true"
+                                            onClick={() => {
+                                                setListItems(listItems.filter(item => item !== listItem));
+                                            }}
+                                        />
+                                    </label>
+                                ))}
+                            </ul>
 
-                    </div>
-                </form>
+                            <footer className=" d-flex flex-wrap justify-content-center pb-1 border-top" id="footerNotToDo">
+                                <span className="mb-3 mb-md-0 text-body-secondary opacity-75">Don't do it total: {listItems.length} </span>
+                            </footer>
+
+                        </div>
+                    </form>
+                </div>
             </div>
-
         </>
     )
 };

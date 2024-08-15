@@ -1,5 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
+#buttonChangeDesign {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #baa898;
+  border-color: #baa898;
+  transition: transform 0.2s;
+} 
+
+#buttonChangeDesign:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+} 
+
+/* To Do List Styles */
+.backgroundTodoList{
+  background-color: #ececec;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#cardToDo {
+  width: 40rem;
+  height: 40rem;
+  border: 0px;
+  position: absolute;
+  top: 40%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+#posIToDo {
+  background-color: #fef8af;
+  box-shadow: 0px 3px 3px 1px rgba(128, 128, 128, 0.5);
+  width: 70%;
+  position: relative;
+  height: 100%;
+}
+
+#titleToDo {
+  font-family: 'Roboto, sans-serif';
+  color: rgba(175, 47, 47, 0.15);
+  color: rgb(209 83 83 / 52%);
+}
+
+#inputToDo {
+  border-radius: 0%;
+
+}
+
+#rowItemToDo {
+  transition: none; 
+
+  
+}
+
+#rowItemToDo:hover {
+  transform: none; 
+  cursor: pointer;
+}
+
+#groupToDo {
+  overflow: visible;
+  max-height: none;
+  overflow-x: auto;
+  background-color: white;
+}
+
+#inputToDo {
+border-bottom: none;
+}
+
+#inputToDo:hover {
+  box-shadow: none;
+  outline: none;
+  border-color: #ced4da;
+}
+
+#inputToDo:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #ced4da;
+}
+
+#itemToDo {
+  font-size: 20px;
+}
+
+#trashToDo {
+  font-size: 15px;
+}
+
+.list-group-item .fa-xmark {
+  display: none;
+  color: rgba(175, 47, 47, 0.15);
+  color: rgb(209 83 83 / 52%);
+}
+
+.list-group-item:hover .fa-xmark {
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+
+#footerToDo {
+  border-top: none;
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0%;
+}
+
+
+
+/* Not To Do List Styles */
+
+.backgroundNotToDo {
   background-image: url("https://www.montpellier-appliances.com/wp-content/uploads/2022/10/MAB145_2000px_Web_Lifestyle.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -10,7 +134,7 @@ body {
   height: 100vh;
 }
 
-.card {
+#cardNotToDo {
   background-image: url("https://static.vecteezy.com/system/resources/previews/009/397/853/non_2x/paper-sheet-clipart-design-illustration-free-png.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -28,7 +152,7 @@ body {
 
 }
 
-#posIt {
+#posItNotToDo {
   background-color: #fef8af;
   box-shadow: 0px 3px 3px 1px rgba(128, 128, 128, 0.5);
   width: 70%;
@@ -65,7 +189,7 @@ body {
 }
 
 .list-group-item:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -75,4 +199,12 @@ body {
 
 .list-group-item:hover .fa-trash-can {
   display: block;
+  height: 35px;
+  width: 35px;
+}
+
+#footerNotToDo {
+  position: absolute;
+  bottom: 0%;
+  width: 90%; 
 }
