@@ -29,7 +29,7 @@ const NotToDoList = () => {
 
     return (
         <>
-            <div className="card ms-4 pt-2" style={{ width: "25rem", height: "34rem", position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)"}}>
+            <div className="card ms-4 pt-2">
                 <h1 className="text-center mt-5 mb-3">Not To Do List</h1>
                 <form onSubmit={send}>
                     <input
@@ -41,8 +41,8 @@ const NotToDoList = () => {
                         onChange={(e) => setNewItem(e.target.value)}
                         onKeyDown={handleKeyPress}
                     />
-                    <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posIt" style={{ position: 'relative', height: '100%' }}>
-                        <ul className="list-group" style={{ overflow: 'auto', maxHeight: '230px' }}>
+                    <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posIt">
+                        <ul className="list-group">
                             {listItems.length === 0 && (
                                 <h5 className="text-center text-danger p-5 bg-danger bg-opacity-25 rounded">Your list is empty, I can't believe you have no regrets.</h5>
                             )}
@@ -56,7 +56,7 @@ const NotToDoList = () => {
                                         checked={listItem.checked}
                                         onChange={() => handleCheckboxChange(index)}
                                     />
-                                    <span style={{ fontSize: "15px", textDecoration: listItem.checked ? 'line-through' : 'none' }}>
+                                    <span className={`item ${listItem.checked ? 'checked' : ''}`}>
                                         {listItem.text}
                                     </span>
                                     <button

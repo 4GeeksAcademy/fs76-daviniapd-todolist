@@ -19,7 +19,12 @@ body {
   background-color: transparent;
   border: 0px;
   margin-top: -3px;
-
+  width: 25rem;
+  height: 34rem;
+  position: absolute;
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 
 }
 
@@ -27,7 +32,32 @@ body {
   background-color: #fef8af;
   box-shadow: 0px 3px 3px 1px rgba(128, 128, 128, 0.5);
   width: 70%;
+  position: relative;
+  height: 100%;
 
+}
+
+.item {
+  font-size: 15px;
+}
+
+.item.checked {
+  text-decoration: line-through;
+}
+
+.form-check-input:checked {
+  background-color: #34C759; 
+  box-shadow: 0 0 2px 1px #34C759, 0 0 5px 2px rgba(0, 128, 0, 0.4);
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: #b8bdc2;;
+}
+
+.list-group {
+  overflow: auto;
+  max-height: 230px;
 }
 
 .list-group-item {
