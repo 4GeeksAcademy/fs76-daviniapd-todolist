@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+const titleStyles = {
+    fontFamily: 'Montserrat, sans-serif',
+}
+
 const ToDoList = () => {
 
     const [listItems, setListItems] = useState([
@@ -26,10 +30,10 @@ const ToDoList = () => {
         <>
             <div className="backgroundTodoList">
                 <div className="card ms-4 pt-2" id="cardToDo">
-                    <h1 className="text-center mt-5 mb-3" id="titleToDo">To Do List</h1>
-                    <form onSubmit={send}>
+                    <h1 className="text-center mt-5 mb-3" id="titleToDo" style={titleStyles}>To Do List</h1>
+                    <form className="mx-auto w-75" onSubmit={send} id="formToDo">
                         <input
-                            className="form-control form-control-lg w-75 mx-auto"
+                            className="form-control form-control-lg w-100 mx-auto"
                             type="text"
                             placeholder="What would you regret doing?"
                             aria-label="To do item"
@@ -39,9 +43,9 @@ const ToDoList = () => {
                             onKeyDown={handleKeyPress}
                         />
 
-                        <ul className="list-group w-75 mx-auto" id="groupToDo">
+                        <ul className="list-group w-100 mx-auto" id="groupToDo">
                             {listItems.length === 0 && (
-                                <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                                <div class="alert alert-danger d-flex align-items-center mt-3 w-75 mx-auto" role="alert">
                                     <i class="fa-solid fa-triangle-exclamation"></i>
                                     <div className="ms-1">
                                         No hay tareas, añadir tareas
@@ -68,7 +72,7 @@ const ToDoList = () => {
                             ))}
 
                         </ul>
-                        <footer className=" d-flex flex-wrap border-top w-75 mx-auto" id="footerToDo">
+                        <footer className=" d-flex flex-wrap border-top w-100 mx-auto" id="footerToDo">
                             <span className="mb-3 mb-md-0 text-body-secondary opacity-75">To do total: {listItems.length} </span>
                         </footer>
                     </form>

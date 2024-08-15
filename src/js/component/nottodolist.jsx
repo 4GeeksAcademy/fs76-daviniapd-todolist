@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "/workspaces/fs76-daviniapd-todolist/src/styles/index.css";
 
+const titleStyles = {
+    fontFamily: 'Montserrat, sans-serif',
+}
 
 
 const NotToDoList = () => {
@@ -35,7 +38,7 @@ const NotToDoList = () => {
         <>
             <div className="backgroundNotToDo">
                 <div className="card ms-4 pt-2" id="cardNotToDo">
-                    <h1 className="text-center mt-5 mb-3">Not To Do List</h1>
+                    <h1 className="text-center mt-5 mb-3 fs-2" style={titleStyles}>Not To Do List</h1>
                     <form onSubmit={send}>
                         <input
                             className="form-control form-control-lg w-75 mx-auto"
@@ -49,7 +52,12 @@ const NotToDoList = () => {
                         <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posItNotToDo">
                             <ul className="list-group" id="listNotToDo">
                                 {listItems.length === 0 && (
-                                    <h5 className="text-center text-danger p-5 bg-danger bg-opacity-25 rounded">Your list is empty, I can't believe you have no regrets.</h5>
+                                    <div class="alert alert-danger d-flex align-items-center text-center mt-3" role="alert">
+                                    <i class="fa-solid fa-triangle-exclamation fs-2"></i>
+                                    <div className="ms-1">
+                                    Your list is empty, I can't believe you have no regrets.
+                                    </div>
+                                </div>
                                 )}
 
                                 {listItems.map((listItem, index) => (
@@ -66,7 +74,7 @@ const NotToDoList = () => {
                                         </span>
                                         <button
                                             type="button"
-                                            className="fa-solid fa-trash-can ms-auto btn btn-outline-secondary rounded-circle p-2 lh-1"
+                                            className="fa-solid fa-trash-can ms-auto btn text-secondary p-2 lh-1"
                                             aria-hidden="true"
                                             onClick={() => {
                                                 setListItems(listItems.filter(item => item !== listItem));

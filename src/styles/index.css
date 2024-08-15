@@ -34,29 +34,30 @@
   background-color: transparent;
 }
 
+#formToDo {
+  box-shadow: 0px 10px 0px -4px white, 0px 20px 0px -8px #f1f1f1, 0px 20px 20px 5px #d1cfcf;
+
+}
+
 #posIToDo {
   background-color: #fef8af;
-  box-shadow: 0px 3px 3px 1px rgba(128, 128, 128, 0.5);
   width: 70%;
   position: relative;
   height: 100%;
+
 }
 
 #titleToDo {
-  font-family: 'Roboto, sans-serif';
   color: rgba(175, 47, 47, 0.15);
   color: rgb(209 83 83 / 52%);
 }
 
 #inputToDo {
   border-radius: 0%;
-
 }
 
 #rowItemToDo {
   transition: none; 
-
-  
 }
 
 #rowItemToDo:hover {
@@ -117,7 +118,9 @@ border-bottom: none;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0%;
+
 }
+
 
 
 
@@ -189,18 +192,19 @@ border-bottom: none;
 }
 
 .list-group-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   cursor: pointer;
 }
 
 .list-group-item .fa-trash-can {
   display: none;
+
 }
 
 .list-group-item:hover .fa-trash-can {
   display: block;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 
 #footerNotToDo {
