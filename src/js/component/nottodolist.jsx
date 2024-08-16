@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/workspaces/fs76-daviniapd-todolist/src/styles/index.css";
+import "/src/styles/index.css";
 
 const titleStyles = {
     fontFamily: 'Montserrat, sans-serif',
@@ -52,8 +52,8 @@ const NotToDoList = () => {
                         <div className="mx-auto my-3 bg-opacity-50 px-3 pt-3 pb-1" id="posItNotToDo">
                             <ul className="list-group" id="listNotToDo">
                                 {listItems.length === 0 && (
-                                    <div class="alert alert-danger d-flex align-items-center text-center mt-3" role="alert">
-                                    <i class="fa-solid fa-triangle-exclamation fs-2"></i>
+                                    <div className="alert alert-danger d-flex align-items-center text-center mt-3" role="alert">
+                                    <i className="fa-solid fa-triangle-exclamation fs-2"></i>
                                     <div className="ms-1">
                                     Your list is empty, I can't believe you have no regrets.
                                     </div>

@@ -45,8 +45,8 @@ const ToDoList = () => {
 
                         <ul className="list-group w-100 mx-auto" id="groupToDo">
                             {listItems.length === 0 && (
-                                <div class="alert alert-danger d-flex align-items-center mt-3 w-75 mx-auto" role="alert">
-                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                <div className="alert alert-danger d-flex align-items-center mt-3 w-75 mx-auto" role="alert">
+                                    <i className="fa-solid fa-triangle-exclamation"></i>
                                     <div className="ms-1">
                                         No hay tareas, añadir tareas
                                     </div>
