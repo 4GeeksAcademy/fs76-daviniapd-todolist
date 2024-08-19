@@ -38,11 +38,12 @@ const NotToDoList = () => {
         <>
             <div className="backgroundNotToDo">
                 <div className="card ms-4 pt-2" id="cardNotToDo">
-                    <h1 className="text-center mt-5 mb-3 fs-2" style={titleStyles}>Not To Do List</h1>
+                    <h1 className="text-center mt-5 mb-3 fs-1" style={titleStyles}>Not To Do List</h1>
                     <form onSubmit={send}>
                         <input
-                            className="form-control form-control-lg w-75 mx-auto"
+                            className="form-control form-control-lg mx-auto"
                             type="text"
+                            id="inputNotToDo"
                             placeholder="What would you regret doing?"
                             aria-label="Not to do item"
                             value={newItem}
@@ -62,7 +63,7 @@ const NotToDoList = () => {
 
                                 {listItems.map((listItem, index) => (
 
-                                    <label className="list-group-item d-flex gap-2" key={index}>
+                                    <div className="list-group-item d-flex gap-2" key={index}>
                                         <input
                                             className="form-check-input flex-shrink-0"
                                             type="checkbox"
@@ -80,7 +81,7 @@ const NotToDoList = () => {
                                                 setListItems(listItems.filter(item => item !== listItem));
                                             }}
                                         />
-                                    </label>
+                                    </div>
                                 ))}
                             </ul>
 

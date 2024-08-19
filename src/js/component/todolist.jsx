@@ -55,7 +55,7 @@ const ToDoList = () => {
 
                             {listItems.map((listItem, index) => (
 
-                                <label className="list-group-item d-flex gap-2 rounded-0" key={index} id="rowItemToDo">
+                                <div className="list-group-item d-flex gap-2 rounded-0" key={index} id="rowItemToDo">
                                     <span className={`item ${listItem.checked ? 'checked' : ''}`} id="itemToDo">
                                         {listItem.text}
                                     </span>
@@ -68,7 +68,7 @@ const ToDoList = () => {
                                             setListItems(listItems.filter(item => item !== listItem));
                                         }}
                                     />
-                                </label>
+                                </div>
                             ))}
 
                         </ul>
